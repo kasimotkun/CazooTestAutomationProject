@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Cazoo Demo Tests">
+
+
+    <test verbose="2" preserve-order="true" name="Web Tests">
+        <parameter name="url"  value="https://www.cazoo.co.uk/value-my-car/"/>
+        <parameter name="killAllChromeAndDriverProcessesAfterSuite"  value="true"/>
+        <parameter name="headless"  value="false"/>
+        <parameter name="driverType"  value="chrome"/>
+        <parameter name="takeScreenshotOnTestFailure" value="true"></parameter>
+        <parameter name="screenshotsDir" value="target\\surefire-reports\\"></parameter>
+        <classes>
+            <class name="test.java.WebTests.SampleTest"></class>
+        </classes>
+    </test>
+    <listeners>
+        <listener class-name="main.java.Listeners.TestListener"></listener>
+    </listeners>
+</suite>
